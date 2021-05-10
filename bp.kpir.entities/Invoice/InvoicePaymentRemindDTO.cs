@@ -6,8 +6,9 @@ namespace bp.kpir.DAO.Invoice
 {
     public class InvoicePaymentRemindDTO
     {
+        public DateTime DateOfIssue { get; set; }
+        public DateTime DateOfSell { get; set; }
         public DateTime PaymentDate { get; set; }
-
         public CompanyCardDTO Company { get; set; }
         public CurrencyDTO Currency { get; set; }
         public string CorrectionPaymenntInfo { get; set; }
