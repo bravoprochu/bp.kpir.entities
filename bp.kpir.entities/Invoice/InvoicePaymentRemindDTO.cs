@@ -10,6 +10,7 @@ namespace bp.kpir.DAO.Invoice
         public DateTime DateOfSell { get; set; }
         public DateTime PaymentDate { get; set; }
         public CompanyCardDTO Company { get; set; }
+        public string CompanyEmail { get; set; }
         public CurrencyDTO Currency { get; set; }
         public string CorrectionPaymenntInfo { get; set; }
         public int? DaysOverdue { get; set; }
