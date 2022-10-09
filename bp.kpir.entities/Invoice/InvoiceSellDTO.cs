@@ -8,6 +8,10 @@ namespace bp.kpir.DAO.Invoice
 {
     public class InvoiceSellDTO : InvoiceCommonDTO
     {
+        public InvoiceSellDTO()
+        {
+            this.OwnerBankAccountsSelected = new List<BankAccount>();
+        }
         public CompanyDTO CompanyBuyer { get; set; }
         public CompanyDTO CompanySeller { get; set; }
 
@@ -69,6 +73,9 @@ namespace bp.kpir.DAO.Invoice
 
         public bool IsPaymentToReturn => this.InvoiceTotal.Corrections.Total_brutto < 0;
         public bool IsToRepeat { get; set; }
+        
+        public List<BankAccount> OwnerBankAccountsSelected {get;set;}
+
         public bool PaymentIsDone { get; set; }
         public DateTime? PaymentDate { get; set; }
     }
